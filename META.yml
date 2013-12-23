@@ -1,0 +1,20 @@
+---
+abstract: 'Test exit of Git commands'
+author:
+  - 'Nathaniel G. Nutter <nnutter@cpan.org>'
+build_requires:
+  Test::More: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 5.006, CPAN::Meta::Converter version 2.133380'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Git-Repository-Plugin-Test
+requires:
+  Git::Repository: 0
+resources:
+  repository: git://github.com/nnutter/Git-Repository-Plugin-Test.git
+version: 0.001
