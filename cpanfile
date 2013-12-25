@@ -1,8 +1,9 @@
+requires 'Carp';
+requires 'File::Copy';
+requires 'File::Spec';
+requires 'File::Temp';
 requires 'Git::Repository';
-
-on 'test' => sub {
-    requires 'Test::More';
-};
+requires 'Test::More';
 
 on 'develop' => sub {
     requires 'Archive::Tar::Wrapper';
@@ -15,7 +16,7 @@ on 'develop' => sub {
     requires 'Dist::Zilla::Plugin::Git::GatherDir';
     requires 'Dist::Zilla::Plugin::Git::NextVersion';
     requires 'Dist::Zilla::Plugin::Git::Tag';
-    requires 'Dist::Zilla::Plugin::PkgVersion';
+    requires 'Dist::Zilla::Plugin::OurPkgVersion';
     requires 'Dist::Zilla::Plugin::PodVersion';
     requires 'Dist::Zilla::Plugin::Prereqs::FromCPANfile';
     requires 'Dist::Zilla::PluginBundle::Basic';

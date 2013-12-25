@@ -8,3 +8,4 @@ cpanfile
 dist.ini
 lib/Git/Repository/Plugin/Test.pm
 t/basic.t
+t/install_hook.t

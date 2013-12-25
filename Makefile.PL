@@ -9,7 +9,7 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Test exit of Git commands",
+  "ABSTRACT" => "Helper methods for testing interactions with Git",
   "AUTHOR" => "Nathaniel G. Nutter <nnutter\@cpan.org>",
   "BUILD_REQUIRES" => {},
   "CONFIGURE_REQUIRES" => {
@@ -20,12 +20,15 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Git::Repository::Plugin::Test",
   "PREREQ_PM" => {
-    "Git::Repository" => 0
-  },
-  "TEST_REQUIRES" => {
+    "Carp" => 0,
+    "File::Copy" => 0,
+    "File::Spec" => 0,
+    "File::Temp" => 0,
+    "Git::Repository" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "0.001",
+  "TEST_REQUIRES" => {},
+  "VERSION" => "0.002",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -33,6 +36,10 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
+  "Carp" => 0,
+  "File::Copy" => 0,
+  "File::Spec" => 0,
+  "File::Temp" => 0,
   "Git::Repository" => 0,
   "Test::More" => 0
 );
