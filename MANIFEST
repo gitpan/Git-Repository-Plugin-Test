@@ -7,5 +7,8 @@ README
 cpanfile
 dist.ini
 lib/Git/Repository/Plugin/Test.pm
-t/basic.t
+t/clone_tmp_repo.t
 t/install_hook.t
+t/new_tmp_repo.t
+t/options.t
+t/run_exit.t
