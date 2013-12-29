@@ -5,22 +5,18 @@ NAME
 
 VERSION
 
-    version 0.003
+    version 0.004
 
 SYNOPSIS
 
         use Test::More tests => 2;
         use Git::Repository qw(Test);
     
-        # easily create a temporary repository to test with
-        my $repo = Git::Repository->new_tmp_repo();
+        my $repo = Git::Repository->new(...);
     
         # run Git commands as tests
         $repo->run_exit_ok('status');
         $repo->run_exit_is(1, 'nonexistant-subcommand');
-    
-        # install a hook into the temporary repository
-        $repo->install_hook('my-hook-file', 'pre-receive');
 
 DESCRIPTION
 
@@ -41,32 +37,13 @@ METHODS
     Like Git::Repository's run but exceptions are caught and reported as
     test failures unless exit code matches expected exit code.
 
- init_tmp_repo(@init_opts)
+ branch_exists($branchname) =head2 branch_not_exists($branchname)
 
-    Initializes a new repository in a temporary directory. Options, such as
-    --bare, can be passed in.
-
- new_tmp_repo(@init_opts, $options)
-
-    Initializes a new repository in a temporary directory and returns a
-    Git::Repository object. Like init_tmp_repo, new_tmp_repo accepts a list
-    of options for the init command and like Git::Repository's new
-    new_tmp_repo also accepts a reference to an option hash.
-
- clone_tmp_repo(@clone_opts, $options)
-
-    Clones a repository into a temporary directory and returns a
-    Git::Repository object. Like init_tmp_repo, new_tmp_repo accepts a list
-    of options for the init command and like Git::Repository's new
-    new_tmp_repo also accepts a reference to an option hash.
-
- install_hook($source, $target)
-
-    Install a $target, e.g. 'pre-receive', hook into the repository.
+    Test for the existance of a branch.
 
 SEE ALSO
 
-    Git::Repository, Test::Builder
+    Git::Repository, Test::Builder, Git::Repository::Plugin::TestSetUp
 
 AUTHOR
 
