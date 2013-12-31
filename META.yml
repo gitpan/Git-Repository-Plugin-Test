@@ -2,8 +2,7 @@
 abstract: 'Helper methods for testing interactions with Git'
 author:
   - 'Nathaniel G. Nutter <nnutter@cpan.org>'
-build_requires:
-  Git::Repository::Plugin::File: 0
+build_requires: {}
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
@@ -22,4 +21,4 @@ requires:
   Test::More: 0
 resources:
   repository: git://github.com/nnutter/Git-Repository-Plugin-Test.git
-version: 0.005
+version: 0.006

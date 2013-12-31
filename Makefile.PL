@@ -27,10 +27,8 @@ my %WriteMakefileArgs = (
     "Git::Repository" => 0,
     "Test::More" => 0
   },
-  "TEST_REQUIRES" => {
-    "Git::Repository::Plugin::File" => 0
-  },
-  "VERSION" => "0.005",
+  "TEST_REQUIRES" => {},
+  "VERSION" => "0.006",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -43,7 +41,6 @@ my %FallbackPrereqs = (
   "File::Spec" => 0,
   "File::Temp" => 0,
   "Git::Repository" => 0,
-  "Git::Repository::Plugin::File" => 0,
   "Test::More" => 0
 );
 
