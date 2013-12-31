@@ -24,11 +24,11 @@ my %WriteMakefileArgs = (
     "File::Copy" => 0,
     "File::Spec" => 0,
     "File::Temp" => 0,
-    "Git::Repository" => 0,
-    "Test::More" => 0
+    "Git::Repository" => "1.13",
+    "Test::More" => "0.94"
   },
   "TEST_REQUIRES" => {},
-  "VERSION" => "0.006",
+  "VERSION" => "0.007",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -40,8 +40,8 @@ my %FallbackPrereqs = (
   "File::Copy" => 0,
   "File::Spec" => 0,
   "File::Temp" => 0,
-  "Git::Repository" => 0,
-  "Test::More" => 0
+  "Git::Repository" => "1.13",
+  "Test::More" => "0.94"
 );
 
 
